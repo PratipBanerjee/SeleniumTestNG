@@ -1,0 +1,12 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<suite name="Selenium Test NG">
+
+    <test name = "Regression Test">
+    <classes>
+        <class name = "tests.Login"/>
+        <class name = "tests.SearchProduct"/>
+        <class name = "tests.OrderProduct"/>
+
+    </classes>
+    </test>
+</suite>
