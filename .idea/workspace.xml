@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2b67385-028b-446d-9c5e-09ea71ce1106" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/AutomationReport_Login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/AutomationReport_OrderProduct.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/AutomationReport_SearchProduct.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extent-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/extent-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageobjects/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobjects/BaseClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/OrderProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/OrderProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pageobjects/BaseClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobjects/BaseClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/OrderProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/OrderProduct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/SearchProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/SearchProduct.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -362,6 +348,14 @@
       <option name="presentableId" value="Default" />
       <updated>1586961612382</updated>
     </task>
+    <task id="LOCAL-00001" summary="Framework Upgrade 26042020">
+      <created>1587911144237</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587911144237</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -397,8 +391,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Messages" order="11" />
@@ -406,7 +399,7 @@
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.32968536" />
       <window_info anchor="right" id="Maven Projects" order="0" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.32968536" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.32968536" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.32968536" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Designer" order="1" />
       <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.2467448" />
@@ -458,6 +451,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Framework Upgrade 26042020" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework Upgrade 26042020" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
