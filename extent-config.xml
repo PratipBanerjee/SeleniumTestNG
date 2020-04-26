@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extentreports>
-	<extentconfiguration>
+	<configuration>
 	<encoding>UTF-8</encoding>
 	<protocol>https</protocol>
 	<theme>dark</theme>
@@ -16,5 +16,5 @@
 		<![CDATA[ $(document).ready(function() {$('.dashboard-view').click(); });]]>
 	</scripts>
 	<styles><![CDATA[                  ]]></styles>
-	</extentconfiguration>
+	</configuration>
 </extentreports>	

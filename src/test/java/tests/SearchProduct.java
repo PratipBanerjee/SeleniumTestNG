@@ -5,10 +5,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.codoid.products.exception.FilloException;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 import pageobjects.BaseClass;
 import pageobjects.HomePage;
 import pageobjects.SearchResult;
@@ -61,6 +59,17 @@ public class SearchProduct {
     public void reportflush()
     {
         reports.flush();
+    }
+
+    @AfterMethod
+    public void failscreenshot(ITestResult result) throws IOException
+    {
+        if(ITestResult.FAILURE==result.getStatus())
+        {
+            String className = this.getClass().getSimpleName();
+            BaseClass.TakeScreenShot(projectdirectory+"\\Reports\\FailedTestCase_"+className+".png");
+
+        }
     }
 
 
