@@ -46,7 +46,7 @@ public class ReadData {
     public static String ReadObjectRepository(String key) throws IOException
     {
         Properties objectrepository = new Properties();
-        FileInputStream filepath = new FileInputStream(new File(projectdirectory+"\\ObjectRepository.properties"));
+        FileInputStream filepath = new FileInputStream(new File(projectdirectory+"\\ORProductRepository.properties"));
         objectrepository.load(filepath);
         String value = objectrepository.getProperty(key);
         return value;
@@ -66,7 +66,7 @@ public class ReadData {
         Iterator<String> TestDataIterator = TestDataList.iterator();
             while(TestDataIterator.hasNext())
             {
-                for(int i = 0; i<TestDataList.size()-1; i++)
+                for(int i = 0; i<TestDataList.size()-0; i++)
                 {
                     String data = TestDataIterator.next();
                     String datavalue = teststepdata.getField(data);
