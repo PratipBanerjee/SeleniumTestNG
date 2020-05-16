@@ -1,5 +1,6 @@
 package productstoretests;
 
+import base.TestBase;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -8,7 +9,6 @@ import com.codoid.products.exception.FilloException;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import productstorepageobjects.AddCart;
-import productstorepageobjects.BaseClass;
 import productstorepageobjects.Checkout;
 import productstorepageobjects.HomePage;
 import utilities.ReadData;
@@ -31,7 +31,7 @@ public class OrderProduct {
     @BeforeSuite
     public void setUp() throws IOException
     {
-        BaseClass.SetupEnvironment();
+        TestBase.SetupEnvironment();
     }
 
     @BeforeTest
@@ -87,7 +87,7 @@ public class OrderProduct {
     public void reportflush()
     {
         reports.flush();
-        BaseClass.CloseBrowser();
+        TestBase.CloseBrowser();
     }
 
     @AfterMethod
@@ -96,7 +96,7 @@ public class OrderProduct {
         if(ITestResult.FAILURE==result.getStatus())
         {
             String className = this.getClass().getSimpleName();
-            pageobjects.BaseClass.TakeScreenShot(projectdirectory+"\\Reports\\FailedTestCase_"+className+".png");
+            TestBase.TakeScreenShot(projectdirectory+"\\Reports\\FailedTestCase_"+className+".png");
 
         }
     }
@@ -104,7 +104,7 @@ public class OrderProduct {
     @AfterSuite
     public void teardown()
     {
-        BaseClass.CloseBrowser();
+        TestBase.CloseBrowser();
     }
 
 

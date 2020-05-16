@@ -1,13 +1,12 @@
 package pageobjects;
 
+import base.TestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
 import utilities.ReadData;
 
 import java.io.IOException;
 
-public class SearchResult extends BaseClass {
+public class SearchResult extends TestBase {
 
     public static void SelectProduct() throws IOException
     {

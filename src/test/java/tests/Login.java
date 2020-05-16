@@ -7,7 +7,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.codoid.products.exception.FilloException;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-import pageobjects.BaseClass;
+import base.TestBase;
 import pageobjects.HomePage;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -28,7 +28,7 @@ public class Login {
     @BeforeSuite
     public void setUp() throws IOException
     {
-        BaseClass.SetupEnvironment();
+        TestBase.SetupEnvironment();
     }
 
     @BeforeTest
@@ -82,7 +82,7 @@ public class Login {
         if(ITestResult.FAILURE==result.getStatus())
         {
             String className = this.getClass().getSimpleName();
-            BaseClass.TakeScreenShot(projectdirectory+"\\Reports\\FailedTestCase_"+className+".png");
+            TestBase.TakeScreenShot(projectdirectory+"\\Reports\\FailedTestCase_"+className+".png");
 
         }
     }
@@ -90,7 +90,7 @@ public class Login {
     @AfterSuite
     public void teardown()
     {
-        BaseClass.CloseBrowser();
+        TestBase.CloseBrowser();
     }
 
 

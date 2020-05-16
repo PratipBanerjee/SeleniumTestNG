@@ -1,5 +1,10 @@
-package productstorepageobjects;
+package base;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import org.apache.commons.compress.compressors.FileNameUtil;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -11,19 +16,21 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utilities.ReadData;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.FileHandler;
 
-public class BaseClass {
+import utilities.ReadData;
 
-    static String projectdirectory = System.getProperty("user.dir");
-    static WebDriver driver;
+public class TestBase {
+
+
+    public static String projectdirectory = System.getProperty("user.dir");
+    public static WebDriver driver;
 
 
     public static void SetupEnvironment() throws IOException
@@ -100,11 +107,10 @@ public class BaseClass {
         TakesScreenshot snapshot = (TakesScreenshot)driver;
         File source = snapshot.getScreenshotAs(OutputType.FILE);
         String currentTSstr = String.valueOf(System.currentTimeMillis());
-        String destination = projectdirectory+"\\Screenshots\\"+currentTSstr+".png";
+        String destination = projectdirectory+"\\Reports\\"+currentTSstr+".png";
         File target = new File(destination);
         FileUtils.copyFile(source, new File(destination));
         return destination;
     }
-
 
 }

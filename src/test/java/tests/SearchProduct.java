@@ -2,12 +2,11 @@ package tests;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.codoid.products.exception.FilloException;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-import pageobjects.BaseClass;
+import base.TestBase;
 import pageobjects.HomePage;
 import pageobjects.SearchResult;
 import utilities.ReadData;
@@ -67,7 +66,7 @@ public class SearchProduct {
         if(ITestResult.FAILURE==result.getStatus())
         {
             String className = this.getClass().getSimpleName();
-            BaseClass.TakeScreenShot(projectdirectory+"\\Reports\\FailedTestCase_"+className+".png");
+            TestBase.TakeScreenShot(projectdirectory+"\\Reports\\FailedTestCase_"+className+".png");
 
         }
     }

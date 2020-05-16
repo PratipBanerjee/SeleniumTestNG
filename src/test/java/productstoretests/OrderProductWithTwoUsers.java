@@ -1,5 +1,6 @@
 package productstoretests;
 
+import base.TestBase;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -9,7 +10,6 @@ import com.codoid.products.exception.FilloException;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import productstorepageobjects.AddCart;
-import productstorepageobjects.BaseClass;
 import productstorepageobjects.Checkout;
 import productstorepageobjects.HomePage;
 import utilities.ReadData;
@@ -31,7 +31,7 @@ public class OrderProductWithTwoUsers {
     @BeforeSuite
     public void setUp() throws IOException
     {
-        BaseClass.SetupEnvironment();
+        TestBase.SetupEnvironment();
     }
 
     @BeforeTest
@@ -61,31 +61,31 @@ public class OrderProductWithTwoUsers {
             String className = this.getClass().getSimpleName();
             HomePage.BrokerLogin();
             test.log(Status.PASS, "Broker Logged In Successfully",
-                    MediaEntityBuilder.createScreenCaptureFromPath(BaseClass.CaptureScreen()).build());
+                    MediaEntityBuilder.createScreenCaptureFromPath("."+TestBase.CaptureScreen()).build());
             HomePage.SelectProduct();
             test.log(Status.PASS, "Product Selected Successfully",
-                    MediaEntityBuilder.createScreenCaptureFromPath(BaseClass.CaptureScreen()).build());
+                    MediaEntityBuilder.createScreenCaptureFromPath(TestBase.CaptureScreen()).build());
             AddCart.AddProductToCart();
             test.log(Status.PASS, "Product Added to Cart Successfully",
-                    MediaEntityBuilder.createScreenCaptureFromPath(BaseClass.CaptureScreen()).build());
+                    MediaEntityBuilder.createScreenCaptureFromPath(TestBase.CaptureScreen()).build());
             HomePage.Logout();
             test.log(Status.PASS, "Broker Logged Out Successfully",
-                    MediaEntityBuilder.createScreenCaptureFromPath(BaseClass.CaptureScreen()).build());
+                    MediaEntityBuilder.createScreenCaptureFromPath(TestBase.CaptureScreen()).build());
             HomePage.UnderwriterLogin();
             test.log(Status.PASS, "Underwriter Logged In Successfully",
-                    MediaEntityBuilder.createScreenCaptureFromPath(BaseClass.CaptureScreen()).build());
+                    MediaEntityBuilder.createScreenCaptureFromPath(TestBase.CaptureScreen()).build());
             HomePage.SelectProduct();
             test.log(Status.PASS, "Product Selected Successfully",
-                    MediaEntityBuilder.createScreenCaptureFromPath(BaseClass.CaptureScreen()).build());
+                    MediaEntityBuilder.createScreenCaptureFromPath(TestBase.CaptureScreen()).build());
             AddCart.AddProductToCart();
             test.log(Status.PASS, "Product Added to Cart Successfully",
-                    MediaEntityBuilder.createScreenCaptureFromPath(BaseClass.CaptureScreen()).build());
+                    MediaEntityBuilder.createScreenCaptureFromPath(TestBase.CaptureScreen()).build());
             HomePage.Logout();
             test.log(Status.PASS, "Underwriter Logged Out Successfully" ,
-                    MediaEntityBuilder.createScreenCaptureFromPath(BaseClass.CaptureScreen()).build());
+                    MediaEntityBuilder.createScreenCaptureFromPath(TestBase.CaptureScreen()).build());
             HomePage.BrokerLogin();
             test.log(Status.PASS, "Broker Logged In Successfully" ,
-                    MediaEntityBuilder.createScreenCaptureFromPath(BaseClass.CaptureScreen()).build());
+                    MediaEntityBuilder.createScreenCaptureFromPath(TestBase.CaptureScreen()).build());
             AddCart.SelectCart();
             Checkout.PlaceOrder(ReadData.GetTestData(className, "Name"),
                     ReadData.GetTestData(className, "Country"),
@@ -94,13 +94,13 @@ public class OrderProductWithTwoUsers {
                     ReadData.GetTestData(className, "Month"),
                     ReadData.GetTestData(className, "Year"));
             test.log(Status.PASS, "Order Placed By Broker Successfully" ,
-                    MediaEntityBuilder.createScreenCaptureFromPath(BaseClass.CaptureScreen()).build());
+                    MediaEntityBuilder.createScreenCaptureFromPath(TestBase.CaptureScreen()).build());
             HomePage.Logout();
             test.log(Status.PASS, "Broker Logged Out Successfully",
-                    MediaEntityBuilder.createScreenCaptureFromPath(BaseClass.CaptureScreen()).build()) ;
+                    MediaEntityBuilder.createScreenCaptureFromPath(TestBase.CaptureScreen()).build()) ;
             HomePage.UnderwriterLogin();
             test.log(Status.PASS, "Underwriter Logged In Successfully",
-                    MediaEntityBuilder.createScreenCaptureFromPath(BaseClass.CaptureScreen()).build());
+                    MediaEntityBuilder.createScreenCaptureFromPath(TestBase.CaptureScreen()).build());
             AddCart.SelectCart();
             Checkout.PlaceOrder(ReadData.GetTestData(className, "Name"),
                     ReadData.GetTestData(className, "Country"),
@@ -109,10 +109,10 @@ public class OrderProductWithTwoUsers {
                     ReadData.GetTestData(className, "Month"),
                     ReadData.GetTestData(className, "Year"));
             test.log(Status.PASS, "Order Placed By Underwriter Successfully" ,
-                    MediaEntityBuilder.createScreenCaptureFromPath(BaseClass.CaptureScreen()).build());
+                    MediaEntityBuilder.createScreenCaptureFromPath(TestBase.CaptureScreen()).build());
             HomePage.Logout();
             test.log(Status.PASS, "Underwriter Logged Out Successfully",
-                    MediaEntityBuilder.createScreenCaptureFromPath(BaseClass.CaptureScreen()).build());
+                    MediaEntityBuilder.createScreenCaptureFromPath(TestBase.CaptureScreen()).build());
 
         }
         catch(IOException e)
@@ -127,7 +127,7 @@ public class OrderProductWithTwoUsers {
     public void reportflush()
     {
         reports.flush();
-        BaseClass.CloseBrowser();
+        TestBase.CloseBrowser();
     }
 
     @AfterMethod
@@ -136,7 +136,7 @@ public class OrderProductWithTwoUsers {
         if(ITestResult.FAILURE==result.getStatus())
         {
             String className = this.getClass().getSimpleName();
-            pageobjects.BaseClass.TakeScreenShot(projectdirectory+"\\Reports\\FailedTestCase_"+className+".png");
+            TestBase.TakeScreenShot(projectdirectory+"\\Reports\\FailedTestCase_"+className+".png");
 
         }
     }

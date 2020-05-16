@@ -5,7 +5,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-import pageobjects.BaseClass;
+import base.TestBase;
 import pageobjects.Checkout;
 
 import java.io.IOException;
@@ -60,7 +60,7 @@ public class OrderProduct {
         if(ITestResult.FAILURE==result.getStatus())
         {
             String className = this.getClass().getSimpleName();
-            BaseClass.TakeScreenShot(projectdirectory+"\\Reports\\FailedTestCase_"+className+".png");
+            TestBase.TakeScreenShot(projectdirectory+"\\Reports\\FailedTestCase_"+className+".png");
 
         }
     }

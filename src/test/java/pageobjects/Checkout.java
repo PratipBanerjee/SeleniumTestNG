@@ -1,14 +1,12 @@
 package pageobjects;
 
+import base.TestBase;
 import org.openqa.selenium.By;
 import utilities.ReadData;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
 
-public class Checkout extends BaseClass {
+public class Checkout extends TestBase {
 
     public static void Payment() throws IOException
     {

@@ -1,21 +1,20 @@
 package pageobjects;
 
-import com.aventstack.extentreports.Status;
+import base.TestBase;
 import com.codoid.products.exception.FilloException;
 import org.openqa.selenium.By;
 import utilities.ReadData;
 
-import javax.imageio.IIOException;
 import java.io.IOException;
 
-public class HomePage extends BaseClass {
+public class HomePage extends TestBase {
 
 public static void ClickSignIn() throws FilloException, IOException
     {
         try
         {
-            BaseClass.WaitForElement(ReadData.ReadObjectRepository("SignInLink"));
-            BaseClass.driver.findElement(By.xpath(ReadData.ReadObjectRepository("SignInLink"))).click();
+            TestBase.WaitForElement(ReadData.ReadObjectRepository("SignInLink"));
+            TestBase.driver.findElement(By.xpath(ReadData.ReadObjectRepository("SignInLink"))).click();
 
         }
         catch(IOException e)
@@ -30,11 +29,11 @@ public static void ClickSignIn() throws FilloException, IOException
     {
         try
         {
-            BaseClass.WaitForElement(ReadData.ReadObjectRepository("Email"));
+            TestBase.WaitForElement(ReadData.ReadObjectRepository("Email"));
             driver.findElement(By.xpath(ReadData.ReadObjectRepository("Email"))).sendKeys(email);
             driver.findElement(By.xpath(ReadData.ReadObjectRepository("Password"))).sendKeys(password);
             driver.findElement(By.xpath(ReadData.ReadObjectRepository("LoginButton"))).click();
-            BaseClass.WaitForElement(ReadData.ReadObjectRepository("LoginValidation"));
+            TestBase.WaitForElement(ReadData.ReadObjectRepository("LoginValidation"));
         }
         catch(IOException e)
         {
@@ -46,7 +45,7 @@ public static void ClickSignIn() throws FilloException, IOException
     {
         try
         {
-            BaseClass.WaitForElement(ReadData.ReadObjectRepository("ShoppingCart"));
+            TestBase.WaitForElement(ReadData.ReadObjectRepository("ShoppingCart"));
             driver.findElement(By.xpath(ReadData.ReadObjectRepository("ShoppingCart"))).click();
         }
         catch(IOException e)
@@ -59,7 +58,7 @@ public static void ClickSignIn() throws FilloException, IOException
     {
         try
         {
-            BaseClass.WaitForElement(ReadData.ReadObjectRepository("LogOut"));
+            TestBase.WaitForElement(ReadData.ReadObjectRepository("LogOut"));
             driver.findElement(By.xpath(ReadData.ReadObjectRepository("LogOut"))).click();
         }
         catch(IOException e)
@@ -72,7 +71,7 @@ public static void ClickSignIn() throws FilloException, IOException
     {
         try
         {
-            BaseClass.WaitForElement(ReadData.ReadObjectRepository("HomePageLink"));
+            TestBase.WaitForElement(ReadData.ReadObjectRepository("HomePageLink"));
             driver.findElement(By.xpath(ReadData.ReadObjectRepository("HomePageLink"))).click();
         }
         catch(IOException e)
@@ -85,7 +84,7 @@ public static void ClickSignIn() throws FilloException, IOException
     {
         try
         {
-            BaseClass.WaitForElement(ReadData.ReadObjectRepository("SearchField"));
+            TestBase.WaitForElement(ReadData.ReadObjectRepository("SearchField"));
             driver.findElement(By.xpath(ReadData.ReadObjectRepository("SearchField"))).sendKeys(ProductCategory);
             driver.findElement(By.xpath(ReadData.ReadObjectRepository("SearchButton"))).click();
         }
