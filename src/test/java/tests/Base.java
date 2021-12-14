@@ -53,7 +53,7 @@ public class Base {
     }
 
     @BeforeTest
-    protected List<HashMap<String, String>> fetchTestData()
+    public List<HashMap<String, String>> fetchTestData()
     {
         List <HashMap<String, String>> SheetData = new ArrayList<>();
         try
