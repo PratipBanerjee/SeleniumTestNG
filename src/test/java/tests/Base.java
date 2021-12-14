@@ -26,7 +26,7 @@ public class Base {
         return driver;
     }
 
-    protected void setDriver()
+    public void setDriver()
     {
         driver = webDriverManager.createDriver(propertiesReader.getProperty("Browser"));
     }
