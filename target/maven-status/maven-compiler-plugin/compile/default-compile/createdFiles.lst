@@ -1,0 +1,5 @@
+framework\dataprovidermanager\ExcelReader.class
+framework\drivermanager\WebDriverManager.class
+pagefactory\HomePage.class
+framework\dataprovidermanager\PropertiesReader.class
+framework\webelementutility\WebElementUtil.class

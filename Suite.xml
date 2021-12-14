@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<suite name = "TestAutomation">
+
+    <test name = "TestScenario">
+        <classes>
+            <class name = "tests.TestCase_01" />
+        </classes>
+    </test>
+</suite>
