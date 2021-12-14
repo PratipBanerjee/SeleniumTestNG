@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class BaseSetUp {
+public class Base {
 
     public WebDriver driver;
 

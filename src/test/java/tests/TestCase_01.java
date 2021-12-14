@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 
 
-public class TestCase_01 extends BaseSetUp {
+public class TestCase_01 extends Base {
 
     public List<HashMap<String, String>> TestData;
 
