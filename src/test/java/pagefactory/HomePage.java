@@ -37,7 +37,7 @@ public class HomePage extends WebElementUtil {
         {
             commonClick(SignInLink);
             commonWaitForElement(UsernameField);
-            ommonSendTestData(UsernameField, username);
+            commonSendTestData(UsernameField, username);
             commonSendTestData(PasswordField, password);
             commonClick(LoginButton);
             commonWaitForElement(LoginSuccessfullMessage);
