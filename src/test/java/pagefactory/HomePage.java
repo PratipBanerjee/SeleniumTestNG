@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class HomePage extends WebElementUtil {
 
@@ -36,13 +37,14 @@ public class HomePage extends WebElementUtil {
         {
             commonClick(SignInLink);
             commonWaitForElement(UsernameField);
-            commonSendTestData(UsernameField, username);
+            ommonSendTestData(UsernameField, username);
             commonSendTestData(PasswordField, password);
             commonClick(LoginButton);
             commonWaitForElement(LoginSuccessfullMessage);
         }
         catch (Exception e)
         {
+            Assert.fail();
             e.printStackTrace();
         }
     }
